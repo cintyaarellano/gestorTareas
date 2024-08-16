@@ -16,7 +16,7 @@ export const addTask = (task) => {
 
 // Función para eliminar una tarea
 export const deleteTask = (id) => {
-    tasks = tasks.filter((taks) => task.id !== parseInt(id));
+    tasks = tasks.filter((task) => task.id !== parseInt(id));
     localStorage.setItem("tasks", JSON.stringify(tasks));
 };
 

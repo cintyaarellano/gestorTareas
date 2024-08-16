@@ -5,7 +5,7 @@ import { getTask } from "./task";
 export const renderTasks = () => {
     const taskList = document.getElementById("task-list");
     taskList.innerHTML = "";
-    const tasks = getTasks();
+    const tasks = getTask();
     tasks.forEach((task) => {
         const li = document.createElement("li");
         li.setAttribute("data-id", task.id);
@@ -16,9 +16,9 @@ export const renderTasks = () => {
         
         li.innerHTML = `
             ${task.text}
-            <><button class="delete"> Borrar </button>
-            <button class="toggle"> ${task.completed === true ? "Regresar" : "Completado"} </button></>
-            ` ;
+            <button class="delete"> Borrar </button>
+            <button class="toggle"> ${task.completed === true ? "Regresar" : "Completado"} </button>
+            `;
 
         taskList.appendChild(li);
     });
